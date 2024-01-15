@@ -1,5 +1,5 @@
 {
-  "name": "shop-app",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,8 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@cypress/react": "^8.0.0",
+    "@cypress/webpack-dev-server": "^3.7.3",
     "@storybook/addon-essentials": "^7.6.8",
     "@storybook/addon-interactions": "^7.6.8",
     "@storybook/addon-links": "^7.6.8",
@@ -24,16 +26,17 @@
     "@storybook/react": "^7.6.8",
     "@storybook/react-vite": "^7.6.8",
     "@storybook/test": "^7.6.8",
-    "@types/node": "^20.11.0",
-    "@types/react": "^18.2.47",
+    "@types/node": "^20.11.1",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",
+    "cypress": "^13.6.2",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "eslint-plugin-storybook": "^0.6.15",
     "postcss": "^8.4.33",
     "storybook": "^7.6.8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.3.3"
   }
 }
