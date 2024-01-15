@@ -6,9 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:cypress": "cypress run",
+    "amplify-deploy": "amplify publish",
+    "amplify-open": "amplify console",
+    "deploy": "npm run build && npm run amplify-deploy",
+    "docker-build": "docker build -t my-ecommerce-frontend ./packages/frontend",
+    "docker-run": "docker run -p 3000:3000 my-ecommerce-frontend"
   },
   "dependencies": {
     "next": "13.4.19",
