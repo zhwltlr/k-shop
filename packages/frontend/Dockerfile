@@ -1,5 +1,5 @@
 # 공식 Node.js 이미지를 기본 이미지로 사용
-FROM node:14
+FROM node:18
 
 # 작업 디렉토리 설정
 WORKDIR /usr/src/app
