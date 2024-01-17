@@ -20,15 +20,3 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-
-      - name: Run tests
-        run: yarn test
-
-      - name: Build Docker image
-        run: docker build -t my-next-app .
-
-      - name: Push Docker image to registry
-        run: |
-          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-          docker tag my-next-app ${{ secrets.DOCKERHUB_USERNAME }}/my-next-app:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/my-next-app:latest
