@@ -6,10 +6,32 @@ const Home = () => {
     <div className="bg-gray-100">
       {/* Header */}
       <header className="bg-white p-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src="/logo.png" alt="Your Logo" className="h-8 mr-2" />
-          <span className="text-xl font-bold">Your E-Commerce</span>
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center">
+            <img src="/logo.png" alt="Your Logo" className="h-8 mr-2" />
+            <span className="text-xl font-bold">Your E-Commerce</span>
+          </div>
+
+          {/* Search */}
+          <div className="ml-auto">
+            <input
+              type="text"
+              placeholder="Search products"
+              className="border p-2 rounded-md focus:outline-none focus:border-blue-500"
+            />
+          </div>
+
+          {/* Authentication links */}
+          <div className="ml-4">
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Login
+            </a>
+            <span className="mx-2 text-gray-600">|</span>
+            <a href="#" className="text-gray-600 hover:text-gray-900">
+              Sign Up
+            </a>
+          </div>
         </div>
 
         {/* Navigation */}
@@ -30,26 +52,6 @@ const Home = () => {
             Account
           </a>
         </nav>
-
-        {/* Search */}
-        <div className="ml-auto">
-          <input
-            type="text"
-            placeholder="Search products"
-            className="border p-2 rounded-md focus:outline-none focus:border-blue-500"
-          />
-        </div>
-
-        {/* Authentication links */}
-        <div className="ml-4">
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Login
-          </a>
-          <span className="mx-2 text-gray-600">|</span>
-          <a href="#" className="text-gray-600 hover:text-gray-900">
-            Sign Up
-          </a>
-        </div>
       </header>
 
       {/* Hero Section */}
@@ -100,6 +102,7 @@ const Home = () => {
       <footer className="bg-gray-900 text-white p-8">
         {/* Contact information, links, newsletter subscription, social media */}
         {/* Your footer content goes here */}
+        All rights reserved.
       </footer>
     </div>
   );
