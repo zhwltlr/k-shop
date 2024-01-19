@@ -32,6 +32,21 @@ const Home = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      id: 1,
+      quote: "Amazing products! The quality is top-notch.",
+      author: "John Doe",
+      imageUrl: "john-doe.jpg",
+    },
+    {
+      id: 2,
+      quote: "Prompt delivery and excellent customer service.",
+      author: "Jane Smith",
+      imageUrl: "jane-smith.jpg",
+    },
+  ];
+
   return (
     <div className="bg-gray-100">
       {/* Header */}
@@ -147,8 +162,22 @@ const Home = () => {
 
       {/* Testimonials or Reviews */}
       <section className="py-8">
-        {/* Display customer testimonials or reviews */}
-        {/* Cards with customer quotes, images, and names */}
+        <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.id}
+              className="bg-white p-4 rounded-md shadow-md"
+            >
+              <p className="text-gray-600 italic mb-2">
+                &quot;{testimonial.quote} &quot;
+              </p>
+              <div className="flex items-center">
+                <p className="font-semibold">{testimonial.author}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Latest Blog Posts */}
