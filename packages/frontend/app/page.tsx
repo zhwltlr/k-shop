@@ -17,6 +17,21 @@ const Home = () => {
     },
   ];
 
+  const specialOffers = [
+    {
+      id: 1,
+      title: "Limited Time Offer",
+      description: "Get 20% off on selected items. Hurry up!",
+      ctaText: "Shop Now",
+    },
+    {
+      id: 2,
+      title: "Free Shipping",
+      description: "Enjoy free shipping on orders over $50.",
+      ctaText: "Browse Products",
+    },
+  ];
+
   return (
     <div className="bg-gray-100">
       {/* Header */}
@@ -116,8 +131,18 @@ const Home = () => {
 
       {/* Special Offers */}
       <section className="bg-gray-200 py-8">
-        {/* Display ongoing promotions or special offers */}
-        {/* Visuals, descriptions, and call-to-action buttons */}
+        <h2 className="text-2xl font-bold mb-4">Special Offers</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {specialOffers.map((offer) => (
+            <div key={offer.id} className="bg-white p-4 rounded-md shadow-md">
+              <h3 className="text-lg font-semibold mb-2">{offer.title}</h3>
+              <p className="text-gray-600">{offer.description}</p>
+              <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
+                {offer.ctaText}
+              </button>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Testimonials or Reviews */}
