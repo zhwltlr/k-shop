@@ -2,6 +2,21 @@ import { Button } from "@/stories/Button";
 import Image from "next/image";
 
 const Home = () => {
+  const featuredProducts = [
+    {
+      id: 1,
+      name: "Product 1",
+      price: 29.99,
+      imageUrl: "product1.jpg",
+    },
+    {
+      id: 2,
+      name: "Product 2",
+      price: 39.99,
+      imageUrl: "product2.jpg",
+    },
+  ];
+
   return (
     <div className="bg-gray-100">
       {/* Header */}
@@ -9,8 +24,8 @@ const Home = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/logo.png" alt="Your Logo" className="h-8 mr-2" />
-            <span className="text-xl font-bold">Your E-Commerce</span>
+            {/* <img src="/logo.png" alt="Your Logo" className="h-8 mr-2" /> */}
+            <span className="text-xl font-bold">K SHOP</span>
           </div>
 
           {/* Search */}
@@ -70,14 +85,33 @@ const Home = () => {
 
       {/* Product Categories */}
       <section className="py-8">
-        {/* Display product categories */}
+        <ul>
+          <li>category1</li>
+          <li>category2</li>
+          <li>category3</li>
+        </ul>
         {/* Each category card with image, title, and link */}
       </section>
 
       {/* Featured Products */}
       <section className="py-8">
-        {/* Showcase featured products */}
-        {/* Product cards with image, name, price, and "Shop Now" button */}
+        <h2 className="text-2xl font-bold mb-4">Featured Products</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredProducts.map((product) => (
+            <div key={product.id} className="bg-white p-4 rounded-md shadow-md">
+              <img
+                src={product.imageUrl}
+                alt={product.name}
+                className="w-full h-32 object-cover mb-4"
+              />
+              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+              <p className="text-gray-600">${product.price.toFixed(2)}</p>
+              <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
+                Shop Now
+              </button>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Special Offers */}
