@@ -99,92 +99,93 @@ const Home = () => {
         </nav>
       </header>
 
-      {/* Hero Section */}
-      <section className="p-8">
-        {/* Large banner, CTA button */}
-        <div>
-          <h1 className="text-4xl font-bold mb-4">Discover Amazing Products</h1>
-          <p className="text-lg mb-6">
-            Explore our latest collections and special offers.
-          </p>
-          <button className="bg-yellow-500 text-black px-4 py-2 rounded-md">
-            Shop Now
-          </button>
-        </div>
-      </section>
+      <div className="w-full h-72 bg-cover overflow-hidden">
+        <img
+          src="https://cdn.pixabay.com/photo/2018/06/17/10/38/artist-3480274_1280.jpg"
+          alt="banner"
+        />
+      </div>
 
-      {/* Product Categories */}
-      <section className="py-8">
-        <ul>
-          <li>category1</li>
-          <li>category2</li>
-          <li>category3</li>
-        </ul>
-        {/* Each category card with image, title, and link */}
-      </section>
+      <main className="px-24">
+        {/* Hero Section */}
+        <section className="p-8">
+          <div>
+            <h1 className="text-4xl font-bold mb-4">Vote for your ARTIST</h1>
+            <p className="text-lg mb-6">
+              You can celebrate your artist&#39;s birthday by voting every day
+            </p>
+            <button className="bg-yellow-500 text-black px-4 py-2 rounded-md">
+              Vote Now
+            </button>
+          </div>
+        </section>
 
-      {/* Featured Products */}
-      <section className="py-8">
-        <h2 className="text-2xl font-bold mb-4">Featured Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredProducts.map((product) => (
-            <div key={product.id} className="bg-white p-4 rounded-md shadow-md">
-              <img
-                src={product.imageUrl}
-                alt={product.name}
-                className="w-full h-32 object-cover mb-4"
-              />
-              <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
-              <p className="text-gray-600">${product.price.toFixed(2)}</p>
-              <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
-                Shop Now
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Special Offers */}
-      <section className="bg-gray-200 py-8">
-        <h2 className="text-2xl font-bold mb-4">Special Offers</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {specialOffers.map((offer) => (
-            <div key={offer.id} className="bg-white p-4 rounded-md shadow-md">
-              <h3 className="text-lg font-semibold mb-2">{offer.title}</h3>
-              <p className="text-gray-600">{offer.description}</p>
-              <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
-                {offer.ctaText}
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials or Reviews */}
-      <section className="py-8">
-        <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-white p-4 rounded-md shadow-md"
-            >
-              <p className="text-gray-600 italic mb-2">
-                &quot;{testimonial.quote} &quot;
-              </p>
-              <div className="flex items-center">
-                <p className="font-semibold">{testimonial.author}</p>
+        {/* Featured Products */}
+        <section className="py-8">
+          <h2 className="text-2xl font-bold mb-4">Featured Products</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredProducts.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white p-4 rounded-md shadow-md"
+              >
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  className="w-full h-32 object-cover mb-4"
+                />
+                <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
+                <p className="text-gray-600">${product.price.toFixed(2)}</p>
+                <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
+                  Shop Now
+                </button>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
 
-      {/* Latest Blog Posts */}
-      <section className="py-8">
-        {/* Display latest blog posts */}
-        {/* Cards with featured images, post titles, and publication dates */}
-      </section>
+        {/* Special Offers */}
+        <section className="bg-gray-200 py-8">
+          <h2 className="text-2xl font-bold mb-4">Special Offers</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {specialOffers.map((offer) => (
+              <div key={offer.id} className="bg-white p-4 rounded-md shadow-md">
+                <h3 className="text-lg font-semibold mb-2">{offer.title}</h3>
+                <p className="text-gray-600">{offer.description}</p>
+                <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md">
+                  {offer.ctaText}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonials or Reviews */}
+        <section className="py-8">
+          <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-white p-4 rounded-md shadow-md"
+              >
+                <p className="text-gray-600 italic mb-2">
+                  &quot;{testimonial.quote} &quot;
+                </p>
+                <div className="flex items-center">
+                  <p className="font-semibold">{testimonial.author}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Latest Blog Posts */}
+        <section className="py-8">
+          {/* Display latest blog posts */}
+          {/* Cards with featured images, post titles, and publication dates */}
+        </section>
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white p-8">
