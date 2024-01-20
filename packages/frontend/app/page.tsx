@@ -47,6 +47,21 @@ const Home = () => {
     },
   ];
 
+  const latestBlogPosts = [
+    {
+      id: 1,
+      title: "10 Tips for a Healthy Lifestyle",
+      imageUrl: "blog-post1.jpg",
+      publicationDate: "January 15, 2024",
+    },
+    {
+      id: 2,
+      title: "Exploring the Great Outdoors: A Nature Adventure",
+      imageUrl: "blog-post2.jpg",
+      publicationDate: "January 10, 2024",
+    },
+  ];
+
   return (
     <div className="bg-gray-100">
       {/* Header */}
@@ -182,8 +197,20 @@ const Home = () => {
 
         {/* Latest Blog Posts */}
         <section className="py-8">
-          {/* Display latest blog posts */}
-          {/* Cards with featured images, post titles, and publication dates */}
+          <h2 className="text-2xl font-bold mb-4">Latest Blog Posts</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {latestBlogPosts.map((post) => (
+              <div key={post.id} className="bg-white p-4 rounded-md shadow-md">
+                <img
+                  src={post.imageUrl}
+                  alt={post.title}
+                  className="w-full h-32 object-cover mb-4"
+                />
+                <h3 className="text-lg font-semibold mb-2">{post.title}</h3>
+                <p className="text-gray-600">{post.publicationDate}</p>
+              </div>
+            ))}
+          </div>
         </section>
       </main>
 
