@@ -114,14 +114,11 @@ const Home = () => {
         </nav>
       </header>
 
-      <div className="w-full h-72 bg-cover overflow-hidden">
-        <img
-          src="https://cdn.pixabay.com/photo/2018/06/17/10/38/artist-3480274_1280.jpg"
-          alt="banner"
-        />
+      <div className="w-full h-96 overflow-hidden relative">
+        <Image src="/banner.jpg" alt="banner" layout="fill" objectFit="cover" />
       </div>
 
-      <main className="px-24">
+      <main className="px-8 md:px-16 lg:px-24">
         {/* Hero Section */}
         <section className="p-8">
           <div>
