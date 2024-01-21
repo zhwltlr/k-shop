@@ -157,7 +157,7 @@ const Home = () => {
         </section>
 
         {/* Special Offers */}
-        <section className="bg-gray-200 py-8">
+        <section className="bg-gray-200 py-8 p-12">
           <h2 className="text-2xl font-bold mb-4">Special Offers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {specialOffers.map((offer) => (
