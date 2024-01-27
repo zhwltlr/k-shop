@@ -1,5 +1,6 @@
 import { Button } from "@/stories/Button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Home = () => {
   const featuredProducts = [
@@ -84,13 +85,13 @@ const Home = () => {
 
           {/* Authentication links */}
           <div className="ml-4">
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <Link href="/login" className="text-gray-600 hover:text-gray-900">
               Login
-            </a>
+            </Link>
             <span className="mx-2 text-gray-600">|</span>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <Link href="/signup" className="text-gray-600 hover:text-gray-900">
               Sign Up
-            </a>
+            </Link>
           </div>
         </div>
 

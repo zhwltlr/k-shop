@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
@@ -56,7 +57,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <form
         className="bg-white p-8 rounded shadow-md w-full sm:w-96"
         onSubmit={handleSubmit}
@@ -144,6 +145,12 @@ const LoginForm = () => {
           Login
         </button>
       </form>
+
+      <Link href="/signup" className="mt-4">
+        <p className="text-blue-500 underline underline-offset-2 cursor-pointer">
+          Don&#39;t have an account?
+        </p>
+      </Link>
     </div>
   );
 };
