@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/stories/Button";
 import Image from "next/image";
 import Link from "next/link";
@@ -134,6 +135,10 @@ const Home = () => {
         </section>
 
         {/* Featured Products */}
+        {/* test for storybook */}
+        <Button primary={false} size="large" label="test for false"></Button>
+        <Button primary={true} label={"test for sb"}></Button>
+
         <section className="py-8">
           <h2 className="text-2xl font-bold mb-4">Featured Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
